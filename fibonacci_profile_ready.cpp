@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 
-long long fibr(unsigned long long n)
+unsigned long long fibr(unsigned long long n)
 {
 	return n <= 0 ? 0 : n == 1 ? 1 : fibr(n-1) + fibr(n-2);
 }
 
-long long fibi(int n)
+unsigned long long fibi(int n)
 {
 	if(n == 0) return 0;
 	
