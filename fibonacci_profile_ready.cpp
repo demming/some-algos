@@ -24,7 +24,7 @@ unsigned long long fibr(unsigned long long n)
 	return n <= 0 ? 0 : n == 1 ? 1 : fibr(n-1) + fibr(n-2);
 }
 
-unsigned long long fibi(int n)
+unsigned long long fibi(uint n)
 {
 	if(n == 0) return 0;
 	
