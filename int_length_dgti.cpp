@@ -21,7 +21,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
  * dgti:        returns the digit in an integer at position pos
  *  NOTE:       as a snippet only, for proper execution it requires a proper implementation of integer overflow controls
  */
-typedef unsigned char       uchar;
 typedef unsigned long long  ullong;
 /// @TODO SEE BELOW THE FIXME TAG IN narc_num_count_in_rng
 size_t int_length(ullong num)
@@ -34,12 +33,12 @@ size_t int_length(ullong num)
 }
 
 /// @note: char for size only, debatable, will wind up as an int anyway. return type was also char but is long due to the assignment requirements
-uchar dgti(ullong num, uchar pos)
+uint dgti(ullong num, uint pos)
 {
 // 	std::stringstream ss; ss << num;
 // 	size_t len = std::string(ss.str()).length();		// TODO use int_length now instead
 	size_t len = int_length(num);
 	ullong right_cut = num / (llong) pow(10, len - pos);	// NOTE len-pos >= 0
 
-	return (char) right_cut % 10;
+	return (uint) right_cut % 10;
 }
